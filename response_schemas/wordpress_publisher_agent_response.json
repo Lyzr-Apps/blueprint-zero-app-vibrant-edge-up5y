@@ -1,0 +1,22 @@
+{
+  "agent_name": "WordPress Publisher Agent",
+  "agent_id": "6999d4b6067ed23a02cf7dfa",
+  "description": "Posts completed articles to WordPress with featured image, categories, tags, FAQ schema, scheduled publish time, daily limit enforcement, and duplicate prevention",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "wp_post_id": "string",
+    "post_url": "string",
+    "published_at": "string",
+    "status": "string",
+    "error_message": "string"
+  },
+  "example_response": {
+    "wp_post_id": "sample string",
+    "post_url": "sample string",
+    "published_at": "sample string",
+    "status": "sample string",
+    "error_message": "sample string"
+  }
+}

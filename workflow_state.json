@@ -1,0 +1,42 @@
+{
+  "agents": {
+    "content_pipeline_manager": {
+      "agent_id": "6999d49b80d993c990b4d36a",
+      "type": "manager",
+      "managed_agents": [
+        "6999d487067ed23a02cf7df2",
+        "6999d4885c18d73bd81b8c8a",
+        "6999d488b6d5f73211681a6e"
+      ]
+    },
+    "transcript_extractor": {
+      "agent_id": "6999d487067ed23a02cf7df2",
+      "type": "sub-agent"
+    },
+    "seo_structure": {
+      "agent_id": "6999d4885c18d73bd81b8c8a",
+      "type": "sub-agent"
+    },
+    "article_writer": {
+      "agent_id": "6999d488b6d5f73211681a6e",
+      "type": "sub-agent"
+    },
+    "infographic_generator": {
+      "agent_id": "6999d4b6b6d5f73211681a72",
+      "type": "independent",
+      "has_image_output": true
+    },
+    "wordpress_publisher": {
+      "agent_id": "6999d4b6067ed23a02cf7dfa",
+      "type": "independent",
+      "has_schedule": true
+    }
+  },
+  "schedule": {
+    "wordpress_publisher": {
+      "schedule_id": "6999d4bf399dfadeac37f6c3",
+      "cron": "0 */2 * * *",
+      "timezone": "America/New_York"
+    }
+  }
+}

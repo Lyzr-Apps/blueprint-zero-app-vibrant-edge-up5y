@@ -1,0 +1,26 @@
+{
+  "agent_name": "Infographic Generator Agent",
+  "agent_id": "6999d4b6b6d5f73211681a72",
+  "description": "Creates an infographic/featured image based on the article H1, key bullet points, and brand style",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "alt_text": "string",
+    "image_description": "string",
+    "status": "string"
+  },
+  "example_response": {
+    "alt_text": "sample string",
+    "image_description": "sample string",
+    "status": "sample string"
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/image.png"
+      }
+    ]
+  }
+}

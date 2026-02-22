@@ -1,0 +1,90 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "id": "input_node",
+        "type": "Input",
+        "label": "YouTube Source URLs",
+        "nodeCategory": "input"
+      },
+      {
+        "id": "content_pipeline_manager",
+        "type": "Agent",
+        "label": "Content Pipeline Manager",
+        "nodeCategory": "agent",
+        "agent_id": "6999d49b80d993c990b4d36a"
+      },
+      {
+        "id": "transcript_extractor",
+        "type": "Agent",
+        "label": "Transcript Extractor Agent",
+        "nodeCategory": "agent",
+        "agent_id": "6999d487067ed23a02cf7df2"
+      },
+      {
+        "id": "seo_structure",
+        "type": "Agent",
+        "label": "SEO Structure Agent",
+        "nodeCategory": "agent",
+        "agent_id": "6999d4885c18d73bd81b8c8a"
+      },
+      {
+        "id": "article_writer",
+        "type": "Agent",
+        "label": "Article Writer Agent",
+        "nodeCategory": "agent",
+        "agent_id": "6999d488b6d5f73211681a6e"
+      },
+      {
+        "id": "infographic_generator",
+        "type": "Agent",
+        "label": "Infographic Generator Agent",
+        "nodeCategory": "agent",
+        "agent_id": "6999d4b6b6d5f73211681a72"
+      },
+      {
+        "id": "wordpress_publisher",
+        "type": "Agent",
+        "label": "WordPress Publisher Agent",
+        "nodeCategory": "agent",
+        "agent_id": "6999d4b6067ed23a02cf7dfa"
+      },
+      {
+        "id": "output_node",
+        "type": "Output",
+        "label": "Published WordPress Post",
+        "nodeCategory": "end"
+      }
+    ],
+    "edges": [
+      {
+        "source": "input_node",
+        "target": "content_pipeline_manager"
+      },
+      {
+        "source": "content_pipeline_manager",
+        "target": "transcript_extractor"
+      },
+      {
+        "source": "content_pipeline_manager",
+        "target": "seo_structure"
+      },
+      {
+        "source": "content_pipeline_manager",
+        "target": "article_writer"
+      },
+      {
+        "source": "content_pipeline_manager",
+        "target": "infographic_generator"
+      },
+      {
+        "source": "infographic_generator",
+        "target": "wordpress_publisher"
+      },
+      {
+        "source": "wordpress_publisher",
+        "target": "output_node"
+      }
+    ]
+  }
+}

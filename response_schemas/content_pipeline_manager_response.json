@@ -1,0 +1,36 @@
+{
+  "agent_name": "Content Pipeline Manager",
+  "agent_id": "6999d49b80d993c990b4d36a",
+  "description": "Coordinates transcript extraction, SEO structuring, and article writing into a single complete article output with meta tags, slug, and HTML body",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "video_id": "string",
+    "video_title": "string",
+    "channel_name": "string",
+    "html_body": "string",
+    "meta_title": "string",
+    "meta_description": "string",
+    "slug": "string",
+    "faq_schema_json": "string",
+    "seo_structure": "string",
+    "word_count": "number",
+    "reading_time_minutes": "number",
+    "status": "string"
+  },
+  "example_response": {
+    "video_id": "sample string",
+    "video_title": "sample string",
+    "channel_name": "sample string",
+    "html_body": "sample string",
+    "meta_title": "sample string",
+    "meta_description": "sample string",
+    "slug": "sample string",
+    "faq_schema_json": "sample string",
+    "seo_structure": "sample string",
+    "word_count": 0,
+    "reading_time_minutes": 0,
+    "status": "sample string"
+  }
+}
