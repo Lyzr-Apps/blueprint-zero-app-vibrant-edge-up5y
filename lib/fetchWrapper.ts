@@ -1,4 +1,4 @@
-const fetchWrapper = async (...args) => {
+const fetchWrapper = async (...args: [RequestInfo | URL, RequestInit?]): Promise<Response | undefined> => {
   try {
     const response = await fetch(...args);
 

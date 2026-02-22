@@ -1081,7 +1081,7 @@ function PublishingQueueScreen({
   const postedVideos = useMemo(() => videos.filter(v => v.stage === 'POSTED'), [videos])
 
   const handlePublish = async (video: VideoItem) => {
-    setPublishingIds(prev => new Set([...prev, video.id]))
+    setPublishingIds(prev => { const n = new Set(prev); n.add(video.id); return n })
     setActiveAgentId(WP_PUBLISHER_AGENT_ID)
     addActivity(video.title, 'Publishing to WordPress', 'success')
 
@@ -1507,7 +1507,7 @@ export default function Page() {
   }, [])
 
   const handleGenerateContent = useCallback(async (video: VideoItem) => {
-    setContentGeneratingIds(prev => new Set([...prev, video.id]))
+    setContentGeneratingIds(prev => { const n = new Set(prev); n.add(video.id); return n })
     setActiveAgentId(CONTENT_PIPELINE_AGENT_ID)
     updateVideo(video.id, { stage: 'TRANSCRIBED' as Stage, last_step: 'content_generation' })
     addActivity(video.title, 'Content generation started', 'success')
